@@ -18,3 +18,5 @@ This repository is organized as a guided lab series. Each lab:
 - links to the next lab
 
 This allows others to follow the project from start to finish.
+
+Status: This project is actively in progress and will be updated as the next stages are completed.
