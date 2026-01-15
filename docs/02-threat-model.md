@@ -33,8 +33,7 @@ Based on these threats, this project will emphasize:
 - Logging and monitoring with CloudTrail and CloudWatch
 - Automated incident response and containment
 
-## Evidence to Capture
-- Screenshot of this threat model documented in GitHub
+
 
 ## Next Lab
 ➡️ [Lab 03 – AWS Account Baseline](03-aws-account-baseline.md)
