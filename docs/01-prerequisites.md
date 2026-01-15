@@ -9,7 +9,6 @@ This lab does not deploy any AWS resources.
 Before starting the technical labs, you should have:
 
 - An active AWS account
-- A GitHub account
 - Basic familiarity with AWS concepts (VPC, IAM, EC2)
 - Willingness to learn by building and documenting
 
