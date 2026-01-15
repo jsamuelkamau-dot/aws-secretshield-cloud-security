@@ -31,5 +31,4 @@ The following principles apply throughout this project:
 
 ---
 
-**Status:** This project is actively in progress and will be updated as the next stages are completed.
-Placeholder
+
