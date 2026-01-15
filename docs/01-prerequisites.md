@@ -22,9 +22,7 @@ The following principles apply throughout this project:
 - Decisions will be explained, not just implemented
 - The project is designed to simulate real-world cloud security scenarios
 
-## Evidence to Capture
-- Screenshot of the repository structure
-- Screenshot of this lab completed in GitHub
+
 
 ## Next Lab
 ➡️ [Lab 02 – Threat Model](02-threat-model.md)
