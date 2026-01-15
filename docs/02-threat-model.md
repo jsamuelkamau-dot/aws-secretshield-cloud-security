@@ -154,7 +154,6 @@ Cloud environments face four primary attack vectors:
 
 ### Step 6 — Create Threat Matrix
 
-Open a text editor and create this table:
 
 | Threat ID | Threat Name | Attack Vector | Likelihood | Impact | Risk Level | Mitigation Labs |
 |-----------|-------------|---------------|------------|--------|------------|-----------------|
