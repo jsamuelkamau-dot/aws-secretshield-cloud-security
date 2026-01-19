@@ -411,7 +411,7 @@ Based on Lab 02 threat model, Lab 03 provides:
 - GuardDuty detects cryptomining
 - Status: **Detection enabled**
 
-**Progress:** 3 of 4 threats now have detection capabilities! 🎉
+**Progress:** 3 of 4 threats now have detection capabilities! 
 
 
 -----
@@ -426,6 +426,8 @@ In Lab 04, you will:
 - Enable MFA for IAM users
 - Set up password policies
 - Conduct access review
+
+- 
 
 
 ---
