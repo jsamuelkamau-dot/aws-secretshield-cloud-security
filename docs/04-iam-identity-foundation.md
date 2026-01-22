@@ -554,3 +554,6 @@ In Lab 05, you will:
 
 
 ---
+**Status:** This project is actively in progress and will be updated as the next stages are completed.
+
+**Updates:** Posted on Linkedin as soon as a lab is complete www.linkedin.com/in/samuel-jesse-8047b3123
