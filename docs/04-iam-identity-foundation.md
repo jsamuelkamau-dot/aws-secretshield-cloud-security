@@ -487,7 +487,7 @@ You should see:
 - **IAM Access Analyzer:** Free (100,000 policy analyses/month free tier)
 - **MFA:** Free (using authenticator app)
 
-**Total estimated cost:** $0.00/month ✅
+**Total estimated cost:** $0.00/month 
 
 **Note:** IAM is one of the few AWS services that is completely free!
 
@@ -502,7 +502,7 @@ Based on Lab 02 threat model:
 - ✅ IAM user MFA prevents user compromise
 - ✅ Strong password policy prevents brute force
 - ✅ Least privilege limits damage if compromised
-- Status: **Significantly mitigated** ✅
+- Status: **Significantly mitigated** 
 
 **Threat T-02: Secrets Exposure**
 - ✅ EC2 role created (will use in Lab 05)
@@ -512,13 +512,13 @@ Based on Lab 02 threat model:
 - ✅ Access Analyzer monitors external access
 - ✅ Least privilege limits unauthorized actions
 - ✅ CloudTrail logs all activity (from Lab 03)
-- Status: **Detection and prevention active** ✅
+- Status: **Detection and prevention active** 
 
 **Threat T-04: Cloud Resource Abuse**
 - ✅ MFA prevents unauthorized login
 - Status: **Access controls strengthened**
 
-**Progress:** Major improvement! T-01 and T-03 are now significantly mitigated! 🎉
+**Progress:** Major improvement! T-01 and T-03 are now significantly mitigated! 
 
 ---
 
