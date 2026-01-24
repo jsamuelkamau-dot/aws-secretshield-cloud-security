@@ -208,7 +208,7 @@ Cloud environments face four primary attack vectors:
 
 
 ##  Defense Layer Mapping Architecture
-
+```
 ┌─────────────────────────────────────────────────────────────────┐
 │              SECRETSHIELD DEFENSE ARCHITECTURE                  │
 └─────────────────────────────────────────────────────────────────┘
@@ -221,21 +221,24 @@ THREATS                   DEFENSE LAYERS              LABS
 │Compromised            │  (Logging)   │
 │   IAM    │             └──────────────┘
 └──────────┘                    │
-     │                          ▼
-     │                  ┌──────────────┐
-     └─────────────────▶│  GuardDuty   │           Lab 03
+                                │
+                                ▼
+                        ┌──────────────┐
+        └─────────────────▶│  GuardDuty   │           Lab 03
                         │ (Detection)  │
                         └──────────────┘
-                               │
-                               ▼
+                                │
+                                ▼
+
 ┌──────────┐             ┌──────────────┐
 │   T-01   │────────────▶│     MFA      │           Lab 04
 │   T-03   │             │ (Prevention) │
 └──────────┘             └──────────────┘
-     │                          │
-     │                          ▼
-     │                  ┌──────────────┐
-     └─────────────────▶│    Least     │           Lab 04
+                                │
+                                │
+                                ▼
+                        ┌──────────────┐
+        └─────────────────▶│    Least     │           Lab 04
                         │  Privilege   │
                         └──────────────┘
 
@@ -267,7 +270,35 @@ THREATS                   DEFENSE LAYERS              LABS
                         │   Lambda     │           Lab 07
                         │  Auto-Stop   │
                         └──────────────┘
----
+```
+
+## Architecture Overview
+
+This SecretShield Defense Architecture demonstrates a comprehensive security approach with multiple layers of protection against common AWS threats.
+
+### Threat Categories
+
+- **T-01**: Compromised IAM credentials
+- **T-02**: Secrets exposure in code/configuration
+- **T-03**: Additional IAM-related threats
+- **T-04**: Resource abuse and unauthorized usage
+
+### Defense Layers
+
+1. **Logging & Monitoring**: CloudTrail captures all API calls
+2. **Detection**: GuardDuty identifies suspicious activities
+3. **Prevention**: MFA and least privilege access controls
+4. **Secrets Management**: AWS Secrets Manager for secure credential storage
+5. **Cost Protection**: Billing alarms and automated response
+6. **Automated Response**: Lambda functions for incident response
+
+### Lab Mapping
+
+- **Lab 03**: CloudTrail logging, GuardDuty detection, billing alarms
+- **Lab 04**: MFA implementation, least privilege policies, IAM role creation
+- **Lab 05**: Secrets Manager integration, IAM role usage
+- **Lab 06**: GuardDuty cryptocurrency mining alerts
+- **Lab 07**: Lambda auto-stop functionality
 
 ## Next Lab
 
