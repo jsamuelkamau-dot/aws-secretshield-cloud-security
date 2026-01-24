@@ -115,6 +115,7 @@ In this lab we will:
 - **Social Engineering**: Harder to obtain both factors simultaneously
 - **Remote Attacks**: Physical device requirement adds significant barrier
 
+## Steps to Enable
 1. Click your account name in the top-right corner
 2. Click **Security credentials**
 3. In the **Multi-factor authentication (MFA)** section, click **Assign MFA device**
