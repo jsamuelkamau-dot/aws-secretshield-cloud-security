@@ -78,7 +78,18 @@ In this lab we will:
 ## Step 3 — Enable AWS CloudTrail
 
 
-## Security Services Architecture
+## CloudTrail Logging Details
+
+**WHO**: All users, roles, services  
+**WHAT**: Every API call (CreateUser, TerminateInstance, etc.)  
+**WHEN**: Timestamp with millisecond precision  
+**WHERE**: Source IP address and region  
+**WHY**: Audit, compliance, security investigation
+
+## CloudTrail Logging Architecture
+
+```
+
 
 ┌─────────────────────────────────────────────────────────────────┐
 │              CLOUDTRAIL LOGGING ARCHITECTURE                    │
@@ -91,44 +102,36 @@ ALL AWS REGIONS
 │   Sydney   │  │   Tokyo    │  │  Virginia  │  │   London   │
 │ ap-south-2 │  │ ap-north-1 │  │  us-east-1 │  │ eu-west-2  │
 └────────────┘  └────────────┘  └────────────┘  └────────────┘
-      │               │                │               │
-      │ API Calls     │ API Calls      │ API Calls     │ API Calls
-      │               │                │               │
-      └───────────────┴────────────────┴───────────────┘
-                            │
-                            ▼
-                   ┌─────────────────┐
-                   │  CloudTrail     │
-                   │  Multi-Region   │
-                   │     Trail       │
-                   └─────────────────┘
-                            │
-                            │ Logs written every 5 mins
-                            ▼
-                   ┌─────────────────┐
-                   │   S3 Bucket     │
-                   │ cloudtrail-logs │
-                   │   [Encrypted]   │
-                   │   [Versioned]   │
-                   └─────────────────┘
-                            │
-                            │ Read by
-                            ▼
-                   ┌─────────────────┐
-                   │   GuardDuty     │
-                   │  (Threat Intel) │
-                   └─────────────────┘
+       │               │                │               │
+       │ API Calls     │ API Calls      │ API Calls     │ API Calls
+       │               │                │               │
+       └───────────────┴────────────────┴───────────────┘
+                                │
+                                ▼
+                    ┌─────────────────┐
+                    │  CloudTrail     │
+                    │  Multi-Region   │
+                    │     Trail       │
+                    └─────────────────┘
+                                │
+                                │ Logs written every 5 mins
+                                ▼
+                    ┌─────────────────┐
+                    │   S3 Bucket     │
+                    │ cloudtrail-logs │
+                    │   [Encrypted]   │
+                    │   [Versioned]   │
+                    └─────────────────┘
+                                │
+                                │ Read by
+                                ▼
+                    ┌─────────────────┐
+                    │   GuardDuty     │
+                    │  (Threat Intel) │
+                    └─────────────────┘
+```
 
-WHO: All users, roles, services
-WHAT: Every API call (CreateUser, TerminateInstance, etc.)
-WHEN: Timestamp with millisecond precision
-WHERE: Source IP address and region
-WHY: Audit, compliance, security investigation
 
-1. In the AWS Console search bar, type: **CloudTrail**
-2. Click **CloudTrail** from the results
-3. In the left menu, click **Trails**
-4. Click **Create trail**
 
 **Configure trail:**
 
